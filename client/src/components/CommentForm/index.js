@@ -7,34 +7,6 @@ const CommentForm = () => {
 
     const [commentText, setText] = useState('');
     const [characterCount, setCharacterCount] = useState(0);
-    const [addComment, { error }] = useMutation(ADD_COMMENT, {
-        update(cache, { data: { addComment } }) {
-          try {
-            // could potentially not exist yet, so wrap in a try...catch
-            const { comments } = cache.readQuery({ query: QUERY_COMMENTS });
-            cache.writeQuery({
-              query: QUERY_COMMENTS,
-              data: { comments: [addComment, ...comments] }
-            });
-          } catch (e) {
-            console.error(e);
-          }
-      
-          // update me object's cache, appending new comment to the end of the array
-          const { me } = cache.readQuery({ query: QUERY_ME });
-          cache.writeQuery({
-            query: QUERY_ME,
-            data: { me: { ...me, comments: [...me.comments, addComment] } }
-          });
-        }
-      });
-
-    const handleChange = event => {
-        if (event.target.value.length <= 280) {
-            setText(event.target.value);
-            setCharacterCount(event.target.value.length);
-        }
-    };
 
     const handleFormSubmit = async event => {
         event.preventDefault();
@@ -52,6 +24,39 @@ const CommentForm = () => {
             console.error(e);
         }
     };
+
+    const [addComment, { error }] = useMutation(ADD_COMMENT, {
+        update(cache, { data: { addComment } }) {
+            try {
+                // could potentially not exist yet, so wrap in a try...catch
+                const { comments } = cache.readQuery({ query: QUERY_COMMENTS });
+                cache.writeQuery({
+                    query: QUERY_COMMENTS,
+                    data: { comments: [addComment, ...comments] }
+                });
+            } catch (e) {
+                console.error(e);
+            }
+
+            // update me object's cache, appending new comment to the end of the array
+            const queryMe = cache.readQuery({ query: QUERY_ME });
+            if (queryMe && queryMe.me) {
+                const { me } = queryMe
+                cache.writeQuery({
+                    query: QUERY_ME,
+                    data: { me: { ...me, comments: [...me.comments, addComment] } }
+                });
+            }
+        }
+    });
+
+    const handleChange = event => {
+        if (event.target.value.length <= 280) {
+            setText(event.target.value);
+            setCharacterCount(event.target.value.length);
+        }
+    };
+
 
     return (
         <div>

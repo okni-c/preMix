@@ -1,5 +1,4 @@
 import React from 'react';
-import Auth from '../utils/auth';
 import { Redirect, useParams } from 'react-router-dom';
 
 import CommentList from '../components/CommentList';
@@ -9,6 +8,7 @@ import CommentForm from '../components/CommentForm';
 import { useQuery, useMutation } from '@apollo/client';
 import { QUERY_USER, QUERY_ME } from '../utils/queries';
 import { ADD_FRIEND } from '../utils/mutations';
+import Auth from '../utils/auth';
 
 const Profile = () => {
   const { username: userParam } = useParams();

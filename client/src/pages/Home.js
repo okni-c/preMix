@@ -11,6 +11,7 @@ const Home = () => {
   const { loading, data } = useQuery(QUERY_COMMENTS);
   const { data: userData } = useQuery(QUERY_ME_BASIC);
   const comments = data?.comments || [];
+  
   const loggedIn = Auth.loggedIn();
 
   return (

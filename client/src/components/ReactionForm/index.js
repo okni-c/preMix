@@ -3,9 +3,10 @@ import { useMutation } from '@apollo/client';
 import { ADD_REACTION } from '../../utils/mutations';
 
 const ReactionForm = ({ commentId }) => {
-    const [addReaction, { error }] = useMutation(ADD_REACTION);
+
     const [reactionBody, setBody] = useState('');
     const [characterCount, setCharacterCount] = useState(0);
+    const [addReaction, { error }] = useMutation(ADD_REACTION);
 
     const handleChange = event => {
         if (event.target.value.length <= 280) {
@@ -49,6 +50,7 @@ const ReactionForm = ({ commentId }) => {
                     Submit
                 </button>
             </form>
+            {error && <div>Something went wrong...</div>}
         </div>
     );
 };
