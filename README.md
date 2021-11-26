@@ -48,4 +48,3 @@ Pull requests are welcome, but we encourage issues to be opened should you find 
 Contributors
 - [@CMPSCjg](https://github.com/CMPSCjg)
 - [@okni-c AKA Kevin Dallas Yatsinko](https://github.com/okni-c)
-- [@nullmaxwell](https://github.com/nullmaxwell)
