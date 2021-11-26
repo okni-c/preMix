@@ -11,7 +11,7 @@
 
 ## About 
     
-A music cloud for unfinished or draft music ideas. Made with React, GraphQL/Apollo and Bootstrap. The database is a combpnation of MongoDB Atlas and AWS S3 for file storage and streaming.
+A music cloud for unfinished or draft music ideas. Made with React, GraphQL/Apollo and Bootstrap. The database is a combination of MongoDB Atlas and AWS S3 for file storage and streaming.
     
     
 ## Local Installation
@@ -34,7 +34,7 @@ npm run develop
 - Create user accounts
 - Login to accounts
 - Post songs, comments, likes
-- Add/remove freinds
+- Add/remove friends
 - Stream audio posted by users
 - Download audio posted by users
 
