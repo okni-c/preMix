@@ -4,6 +4,7 @@
     
 * [About](#about)
 * [Local Installation](#local-installation)
+* [Alpha Features](#alpha-features)
 * [Preview](#preview)
 * [Contributing](#contributing)
 
@@ -29,7 +30,13 @@ npm run seed
 ```
 npm run develop
 ```
-
+## Alpha Features
+- Create user accounts
+- Login to accounts
+- Post songs, comments, likes
+- Add/remove freinds
+- Stream audio posted by users
+- Download audio posted by users
 
 ## Preview 
 
@@ -46,5 +53,5 @@ npm run develop
 Pull requests are welcome, but we encourage issues to be opened should you find bugs or would like to make feature requests.
 
 Contributors
-- [@CMPSCjg](https://github.com/CMPSCjg)
-- [@okni-c AKA Kevin Dallas Yatsinko](https://github.com/okni-c)
+- (Owner) [@okni-c AKA Kevin Dallas Yatsinko](https://github.com/okni-c)
+- (Genuis Support) [@CMPSCjg](https://github.com/CMPSCjg)
