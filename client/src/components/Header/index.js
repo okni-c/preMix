@@ -3,11 +3,11 @@ import Auth from '../../utils/auth';
 import { Link } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import { QUERY_ME_BASIC } from '../../utils/queries';
-import logo from '../../images/logo.png';
+import DarkWave from '../../images/logo-wave-dark.png';
 
 const Header = () => {
 
-  const { data: userData } = useQuery( QUERY_ME_BASIC );
+  const { data: userData } = useQuery(QUERY_ME_BASIC);
 
   const logout = event => {
     event.preventDefault();
@@ -15,30 +15,50 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-secondary mb-4 py-2 flex-row align-center">
-      <div className="container flex-row justify-space-between-lg justify-center align-center">
-        <div style={{ paddingTop: 9 }}>
-          <Link to="/">
-            <img className="logo-nav" src={logo} alt="" />
-          </Link>
-        </div>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+          <Link className="navbar-brand" to="/"><img src={DarkWave} alt="" width="auto" height="50" className="d-inline-block align-text-top nav-logo" /><span className="nav-logo-txt">premix</span></Link>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <Link className="nav-link" to="/discover">Discover</Link>
+              </li>
+              <li class="nav-item">
+                <a className="nav-link" href="#about">About us</a>
+              </li>
+              <li class="nav-item">
+                <div className="vl"></div>
+              </li>
 
-        <nav className="text-center">
-          {Auth.loggedIn() && userData ? (
-            <>
-              <Link to="/profile">{userData.me.username}</Link>
-              <a href="/" onClick={logout}>
-                Logout
-              </a>
-            </>
-          ) : (
-            <>
-              <Link to="/login">Login</Link>
-              <Link to="/signup">Signup</Link>
-            </>
-          )}
-        </nav>
-      </div>
+              {Auth.loggedIn() && userData ? (
+                <>
+                  <li class="nav-item">
+                    <Link className="nav-link" to="/profile">{userData.me.username}</Link>
+                  </li>
+                  <li class="nav-item">
+                    <a className="nav-link" href="/" onClick={logout}>
+                      Logout
+                    </a>
+                  </li>
+                </>
+              ) : (
+                <>
+                  <li class="nav-item">
+                    <Link className="nav-link" to="/signup">Sign up</Link>
+                  </li>
+                  <li class="nav-item">
+                    <Link className="nav-link" to="/login">Login</Link>
+                  </li>
+                </>
+              )}
+            </ul>
+          </div>
+        </div>
+      </nav >
     </header>
   );
 };
