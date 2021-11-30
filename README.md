@@ -40,6 +40,9 @@ npm run develop
 
 ## Preview 
 
+#### Prototype UI
+[![Screenshot-2021-11-27-221051.png](https://i.postimg.cc/Qd1MJT9w/Screenshot-2021-11-27-221051.png)](https://postimg.cc/QFNsXVqJ)
+
 ### The development build of preMix is available [here](https://pre-mix.herokuapp.com/)!
 #### Desktop View
 [![Screen-Shot-2021-11-25-at-6-22-21-PM.png](https://i.postimg.cc/ZnsTrrGS/Screen-Shot-2021-11-25-at-6-22-21-PM.png)](https://postimg.cc/5QvdJF97)
