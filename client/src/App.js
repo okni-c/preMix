@@ -11,7 +11,6 @@ import Signup from './pages/Signup';
 import Discover from './pages/Discover';
 import Landing from './pages/Landing';
 
-import Header from './components/Header';
 import Footer from './components/Footer';
 
 const httpLink = createHttpLink({
@@ -37,7 +36,7 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <Header />
+        
         <Switch>
           <Route exact path="/" component={Landing} />
           <Route exact path="/discover" component={Discover} />
@@ -48,7 +47,7 @@ function App() {
 
           <Route component={NoMatch} />
         </Switch>
-        <Footer />
+        {/* <Footer /> */}
       </Router>
     </ApolloProvider>
   );

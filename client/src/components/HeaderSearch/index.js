@@ -3,6 +3,7 @@ import Auth from '../../utils/auth';
 import { Link } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import { QUERY_ME_BASIC } from '../../utils/queries';
+
 import DarkWave from '../../images/logo-wave-dark.png';
 
 const Header = () => {
@@ -23,18 +24,15 @@ const Header = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
 
-          <div className="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-            <ul className="navbar-nav">
-              <li className="nav-item">
-                <Link className="nav-link" to="/discover">Discover</Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/#about">About us</Link>
-              </li>
-              <li className="nav-item">
-                <div className="vl"></div>
-              </li>
+          <div className="collapse navbar-collapse" id="navbarNavDropdown">
 
+            <div className="flex-grow-1">
+              <form>
+                <input class="form-control searchbar" type="search" placeholder="Search" aria-label="Search" />
+              </form>
+            </div>
+
+            <ul className="navbar-nav">
               {Auth.loggedIn() && userData ? (
                 <>
                   <li className="nav-item">
@@ -57,7 +55,9 @@ const Header = () => {
                 </>
               )}
             </ul>
+
           </div>
+
         </div>
       </nav >
     </header>

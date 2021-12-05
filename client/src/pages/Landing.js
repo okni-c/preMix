@@ -3,9 +3,13 @@ import { Link } from 'react-router-dom';
 import AboutWave from '../images/about-wave.png';
 import AboutPpl from '../images/about-ppl.png';
 
+import Header from '../components/Header';
+
 const Landing = () => {
 
     return (
+        <>
+        <Header />
         <main>
             {/* Hero Section */}
             <div className="hero-background">
@@ -53,6 +57,7 @@ const Landing = () => {
             </div>
             <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
         </main >
+        </>
     );
 };
 

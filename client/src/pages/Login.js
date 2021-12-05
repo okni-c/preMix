@@ -3,6 +3,8 @@ import Auth from '../utils/auth';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
 
+import DarkWave from '../images/logo-wave-dark.png';
+
 const Login = (props) => {
   const [formState, setFormState] = useState({ email: '', password: '' });
   const [login, { error }] = useMutation(LOGIN_USER);
@@ -25,7 +27,7 @@ const Login = (props) => {
       const { data } = await login({
         variables: { ...formState }
       });
-    
+
       Auth.login(data.login.token);
     } catch (e) {
       console.error(e);
@@ -33,39 +35,52 @@ const Login = (props) => {
   };
 
   return (
-    <main className='flex-row justify-center mb-4'>
-      <div className='col-12 col-md-6'>
-        <div className='card'>
-          <h4 className='card-header'>Login</h4>
-          <div className='card-body'>
-            <form onSubmit={handleFormSubmit}>
-              <input
-                className='form-input'
-                placeholder='Your email'
-                name='email'
-                type='email'
-                id='email'
-                value={formState.email}
-                onChange={handleChange}
-              />
-              <input
-                className='form-input'
-                placeholder='Password'
-                name='password'
-                type='password'
-                id='password'
-                value={formState.password}
-                onChange={handleChange}
-              />
-              <button className='btn d-block w-100' type='submit'>
-                Submit
-              </button>
-            </form>
-            {error && <div>Login failed</div>}
+    <div className="containter-fluid">
+      <div className="row">
+
+        <div className="col-5 left-fp">
+          <div className="row justify-content-center fp-left-pt">
+            <img className="col-2 fp-logo" src={DarkWave} />
+            <h1 className="col-10 fp-head">premix</h1>
           </div>
         </div>
+
+        <div className="col-7 right-fp">
+
+        </div>
+
       </div>
-    </main>
+
+
+
+
+
+
+      {/* <form onSubmit={handleFormSubmit}>
+        <input
+          className='form-input'
+          placeholder='Your email'
+          name='email'
+          type='email'
+          id='email'
+          value={formState.email}
+          onChange={handleChange}
+        />
+        <input
+          className='form-input'
+          placeholder='Password'
+          name='password'
+          type='password'
+          id='password'
+          value={formState.password}
+          onChange={handleChange}
+        />
+        <button className='btn d-block w-100' type='submit'>
+          Submit
+        </button>
+      </form>
+      {error && <div>Login failed</div>} */}
+    </div>
   );
 };
 
