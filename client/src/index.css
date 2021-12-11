@@ -112,6 +112,7 @@
 .nav-item {
     margin-left: 20px;
     margin-right: 20px;
+    align-self: center;
 }
 
 .nav-link {
@@ -213,7 +214,6 @@ body::-webkit-scrollbar-thumb:hover {
 
 .left-fp {
     background-color: #FFF785;
-    height: 1024px;
 }
 
 .fp-head {
@@ -232,4 +232,58 @@ body::-webkit-scrollbar-thumb:hover {
 
 .fp-left-pt {
     padding-top: 50%;
+}
+
+.profile-nav-item {
+    padding-left: 22px;
+    padding-right: 22px;
+    transition: 0.1s;
+}
+
+.profile-nav-item:hover {
+    background-color: #EBE260;
+    border-radius: 32px;
+    transition: 0.2s;
+}
+
+.profile-nav-btn {
+    background-color: #969FAA;
+    border-radius: 100%;
+    width: 53px;
+    height: 53px;
+    align-self: center;
+}
+
+.profile-nav-arw {
+    padding-right: 12px;
+    align-self: center;
+}
+
+.dd-arrow {
+    height: 32px;
+    width: 32px;
+}
+
+.dropdown-menu {
+    background-color: #FFFFFF;
+    border: 3px solid #8492A6;
+    border-radius: 6px;
+    -webkit-box-shadow: -19px 17px 21px -8px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: -19px 17px 21px -8px rgba(0, 0, 0, 0.2);
+    box-shadow: -19px 17px 21px -8px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-item {
+    color: #47525E;
+    font-family: Lato;
+    font-weight: bold;
+    font-size: 17px;
+    padding-bottom: 7px;
+    padding-top: 7px;
+    text-align: left;
+    transition: 0.2s;
+}
+
+.dropdown-item:focus, .dropdown-item:hover {
+    transition: 0.2s;
 }

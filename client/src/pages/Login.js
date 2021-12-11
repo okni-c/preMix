@@ -35,28 +35,52 @@ const Login = (props) => {
   };
 
   return (
-    <div className="containter-fluid">
-      <div className="row">
+    <main>
+      <div className="containter">
+        <div className="row">
 
-        <div className="col-5 left-fp">
-          <div className="row justify-content-center fp-left-pt">
-            <img className="col-2 fp-logo" src={DarkWave} />
-            <h1 className="col-10 fp-head">premix</h1>
+          <div className="col-5 left-fp">
+            <div className="row justify-content-center fp-left-pt">
+              <img className="col-2 fp-logo" src={DarkWave} />
+              <h1 className="col-10 fp-head">premix</h1>
+            </div>
           </div>
+
+          <div className="col-7 right-fp">
+            <form onSubmit={handleFormSubmit}>
+              <input
+                className='form-input'
+                placeholder='Your email'
+                name='email'
+                type='email'
+                id='email'
+                value={formState.email}
+                onChange={handleChange}
+              />
+              <input
+                className='form-input'
+                placeholder='Password'
+                name='password'
+                type='password'
+                id='password'
+                value={formState.password}
+                onChange={handleChange}
+              />
+              <button className='btn d-block w-100' type='submit'>
+                Submit
+              </button>
+            </form>
+            {error && <div>Login failed</div>}
+          </div>
+
         </div>
 
-        <div className="col-7 right-fp">
-
-        </div>
-
-      </div>
 
 
 
 
 
-
-      {/* <form onSubmit={handleFormSubmit}>
+        {/* <form onSubmit={handleFormSubmit}>
         <input
           className='form-input'
           placeholder='Your email'
@@ -80,7 +104,8 @@ const Login = (props) => {
         </button>
       </form>
       {error && <div>Login failed</div>} */}
-    </div>
+      </div>
+    </main>
   );
 };
 

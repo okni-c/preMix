@@ -5,6 +5,7 @@ import { useQuery } from '@apollo/client';
 import { QUERY_ME_BASIC } from '../../utils/queries';
 
 import DarkWave from '../../images/logo-wave-dark.png';
+import DDArrow from '../../images/profile-arw.png';
 
 const Header = () => {
 
@@ -28,20 +29,24 @@ const Header = () => {
 
             <div className="flex-grow-1">
               <form>
-                <input class="form-control searchbar" type="search" placeholder="Search" aria-label="Search" />
+                <input className="form-control searchbar" type="search" placeholder="Search" aria-label="Search" />
               </form>
             </div>
 
             <ul className="navbar-nav">
               {Auth.loggedIn() && userData ? (
                 <>
-                  <li className="nav-item">
-                    <Link className="nav-link" to="/profile">{userData.me.username}</Link>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link" href="/" onClick={logout}>
-                      Logout
+                  <li className="profile-nav-item">
+                    <div className="dropdown">
+                    <a className="d-flex" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                      <div className="profile-nav-arw"><img className="dd-arrow" src={DDArrow} /></div>
+                      <div className="profile-nav-btn"></div>
                     </a>
+                      <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink">
+                        <li><Link className="dropdown-item" to="/profile">{userData.me.username}</Link></li>
+                        <li><a className="dropdown-item danger" href="/" onClick={logout}>Log out</a></li>
+                      </ul>
+                    </div>
                   </li>
                 </>
               ) : (
