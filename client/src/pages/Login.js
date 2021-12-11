@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Auth from '../utils/auth';
+import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
 
@@ -36,76 +37,62 @@ const Login = (props) => {
 
   return (
     <main>
-      <div className="containter">
+      <div className="container-fluid h-100">
         <div className="row">
 
           <div className="col-5 left-fp">
-            <div className="row justify-content-center fp-left-pt">
-              <img className="col-2 fp-logo" src={DarkWave} />
-              <h1 className="col-10 fp-head">premix</h1>
+            <div className="row h-100 justify-content-center align-items-center">
+              <div className="col-12 d-flex justify-content-center">
+                <Link to="/" style={{ textDecoration: 'none', display: 'flex' }}>
+                  <img className="fp-logo" src={DarkWave} />
+                  <h1 className="fp-head"> premix</h1>
+                </Link>
+              </div>
             </div>
           </div>
 
           <div className="col-7 right-fp">
-            <form onSubmit={handleFormSubmit}>
-              <input
-                className='form-input'
-                placeholder='Your email'
-                name='email'
-                type='email'
-                id='email'
-                value={formState.email}
-                onChange={handleChange}
-              />
-              <input
-                className='form-input'
-                placeholder='Password'
-                name='password'
-                type='password'
-                id='password'
-                value={formState.password}
-                onChange={handleChange}
-              />
-              <button className='btn d-block w-100' type='submit'>
-                Submit
-              </button>
-            </form>
-            {error && <div>Login failed</div>}
+            <div className="row h-100 justify-content-center align-items-center">
+              <div className="col-12">
+                <h2 className="form-header pb-5">Log in</h2>
+                <form className="pb-5" onSubmit={handleFormSubmit}>
+                  <div className="mb-3">
+                    <label for="email" className="form-label">Email</label>
+                    <input
+                      className='form-control'
+                      name='email'
+                      type='email'
+                      id='email'
+                      value={formState.email}
+                      onChange={handleChange}
+                    />
+                    <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
+                  </div>
+                  <div className="mb-3 pb-5">
+                    <label for="password" className="form-label">Password</label>
+                    <input
+                      className="form-control"
+                      name='password'
+                      type='password'
+                      id='password'
+                      value={formState.password}
+                      onChange={handleChange} />
+                  </div>
+                  <div class="d-flex justify-content-center">
+                    <button className='form-btn' type='submit'>
+                      Log in
+                    </button>
+                  </div>
+                </form>
+                {error && <div class="alert alert-danger" role="alert">
+                  Login Error! Try Again.
+                </div>}
+              </div>
+            </div>
           </div>
-
         </div>
-
-
-
-
-
-
-        {/* <form onSubmit={handleFormSubmit}>
-        <input
-          className='form-input'
-          placeholder='Your email'
-          name='email'
-          type='email'
-          id='email'
-          value={formState.email}
-          onChange={handleChange}
-        />
-        <input
-          className='form-input'
-          placeholder='Password'
-          name='password'
-          type='password'
-          id='password'
-          value={formState.password}
-          onChange={handleChange}
-        />
-        <button className='btn d-block w-100' type='submit'>
-          Submit
-        </button>
-      </form>
-      {error && <div>Login failed</div>} */}
       </div>
-    </main>
+    </main >
   );
 };
 

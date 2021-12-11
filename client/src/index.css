@@ -214,6 +214,21 @@ body::-webkit-scrollbar-thumb:hover {
 
 .left-fp {
     background-color: #FFF785;
+    height: 100vh;
+    align-content: center;
+}
+
+.right-fp {
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.form-header {
+    color: #47525E;
+    font-family: Lato;
+    font-size: 70px;
+    font-weight: bold;
+    text-align: center;
 }
 
 .fp-head {
@@ -222,7 +237,6 @@ body::-webkit-scrollbar-thumb:hover {
     font-weight: bold;
     font-size: 90px;
     text-align: center;
-    width: min-content;
 }
 
 .fp-logo {
@@ -230,8 +244,15 @@ body::-webkit-scrollbar-thumb:hover {
     height: 144px;
 }
 
-.fp-left-pt {
-    padding-top: 50%;
+.form-btn {
+    background-color: #5A6978;
+    border-radius: 33px;
+    width: 216px;
+    height: 69px;
+    color: #FFFFFF;
+    font-family: Lato;
+    font-size: 26px;
+    text-align: center;
 }
 
 .profile-nav-item {
