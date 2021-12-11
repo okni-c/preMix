@@ -107,7 +107,7 @@ const Home = () => {
 
               </div>
             </div>
-            <div className="col-10">
+            <div className="col-10 discover-right">
 
               {/* {loggedIn && (
                 <div className="col-12 mb-3">

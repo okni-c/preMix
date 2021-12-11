@@ -147,6 +147,14 @@ button {
     border-right: 1px solid #D3DCE6;
 }
 
+.discover-right {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 15px;
+    overflow: scroll;
+    height: 100vh;
+}
+
 .discover-layout-img {
     width: 65px;
     height: auto;
@@ -326,4 +334,13 @@ body::-webkit-scrollbar-thumb:hover {
 
 .dropdown-item:focus, .dropdown-item:hover {
     transition: 0.2s;
+}
+
+.grid-card {
+    background-color: #CCCCCC;
+    border: 1px solid #8492A6;
+    border-radius: 15px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 230px;
 }

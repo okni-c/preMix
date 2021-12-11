@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import Art from '../../images/album-art.jpeg';
+
 const CommentList = ({ comments, title }) => {
     if (!comments.length) {
         return <h3>No Comments Yet</h3>;
@@ -8,11 +10,11 @@ const CommentList = ({ comments, title }) => {
 
     return (
         <div className="row">
-            <h3>{title}</h3>
+            {/* <h3>{title}</h3> */}
             {comments &&
                 comments.map(comment => (
-                    <div key={comment._id} className="card mb-3 col-3">
-                        <p className="card-header">
+                    <div key={comment._id} className="col-3">
+                        {/* <p className="card-header">
                             <Link
                                 to={`/profile/${comment.username}`}
                                 style={{ fontWeight: 700 }}
@@ -21,13 +23,21 @@ const CommentList = ({ comments, title }) => {
                                 {comment.username}
                             </Link>{' '}
                             posted on {comment.createdAt}
-                        </p>
-                        <div className="card-body">
+                        </p> */}
+                        <div className="">
+                            {/* Album art goes here */}
+                            <img className="grid-card" src={Art} />
                             <Link to={`/comment/${comment._id}`}>
-                                <p>{comment.commentText}</p>
                                 <p className="mb-0">
-                                    Reactions: {comment.reactionCount} || Click to{' '}
-                                    {comment.reactionCount ? 'see' : 'start'} the discussion!
+                                    <Link
+                                        to={`/profile/${comment.username}`}
+                                        style={{ textDecoration: 'none' }}
+                                        className="text-dark"
+                                    >
+                                        {comment.username}
+                                    </Link>
+                                    {/* Reactions: {comment.reactionCount} || Click to{' '}
+                                    {comment.reactionCount ? 'see' : 'start'} the discussion! */}
                                 </p>
                             </Link>
                         </div>
