@@ -337,10 +337,16 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .grid-card {
-    background-color: #CCCCCC;
     border: 1px solid #8492A6;
     border-radius: 15px;
     margin-left: 0px;
     margin-right: 0px;
     width: 230px;
+    transition: 0.1s;
+}
+
+.grid-card:hover {
+    background-color: rgb(52, 63, 75);
+    opacity: 0.33;
+    transition: 0.2s;
 }

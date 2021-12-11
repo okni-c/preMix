@@ -24,11 +24,17 @@ const CommentList = ({ comments, title }) => {
                             </Link>{' '}
                             posted on {comment.createdAt}
                         </p> */}
-                        <div className="">
-                            {/* Album art goes here */}
+                        <div>
                             <img className="grid-card" src={Art} />
-                            <Link to={`/comment/${comment._id}`}>
-                                <p className="mb-0">
+                            
+                                <p><Link
+                                        to={`/comment/${comment._id}`}
+                                        style={{ textDecoration: 'none' }}
+                                    >
+                                        Song title
+                                    </Link>
+                                </p>
+                                <p>
                                     <Link
                                         to={`/profile/${comment.username}`}
                                         style={{ textDecoration: 'none' }}
@@ -39,7 +45,6 @@ const CommentList = ({ comments, title }) => {
                                     {/* Reactions: {comment.reactionCount} || Click to{' '}
                                     {comment.reactionCount ? 'see' : 'start'} the discussion! */}
                                 </p>
-                            </Link>
                         </div>
                     </div>
                 ))}
