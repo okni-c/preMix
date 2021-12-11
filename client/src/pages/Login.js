@@ -41,17 +41,22 @@ const Login = (props) => {
         <div className="row">
 
           <div className="col-5 left-fp">
-            <div className="row h-100 justify-content-center align-items-center">
-              <div className="col-12 d-flex justify-content-center">
+            <div className="row h-100 justify-content-center">
+
+              <div className="col-12 d-flex justify-content-center align-items-center pt-5">
                 <Link to="/" style={{ textDecoration: 'none', display: 'flex' }}>
                   <img className="fp-logo" src={DarkWave} />
                   <h1 className="fp-head"> premix</h1>
                 </Link>
               </div>
-              <div className="col-12 justify-content-center">
-              <h5 className="form-extra">Already have an account?</h5>
-                <Link to="/signup" style={{ textDecoration: 'none', display: 'flex' }}><button className="form-btn">Sign up</button></Link>
+
+              
+              
+              <div className="col-12 pt-5">
+                <h5 className="form-extra pb-3 d-flex justify-content-center">Don't have an account?</h5>
+                <Link to="/signup" className="d-flex justify-content-center" style={{ textDecoration: 'none' }}><button className="form-btn">Sign up</button></Link>
               </div>
+
             </div>
           </div>
 

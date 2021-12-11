@@ -2,6 +2,11 @@
     font-family: Lato;
 }
 
+button {
+    outline: none;
+    border: 0;
+}
+
 .hero-background {
     background-color: #FFF785;
     height: 750px;
@@ -245,7 +250,6 @@ body::-webkit-scrollbar-thumb:hover {
     font-family: Lato;
     font-weight: bold;
     font-size: 20px;
-    text-align: center;
 }
 
 .fp-logo {
@@ -262,6 +266,12 @@ body::-webkit-scrollbar-thumb:hover {
     font-family: Lato;
     font-size: 26px;
     text-align: center;
+    transition: 0.1s;
+}
+
+.form-btn:hover {
+    background-color: #292d31;
+    transition: 0.2s;
 }
 
 .profile-nav-item {
