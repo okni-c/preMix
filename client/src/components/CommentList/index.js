@@ -7,16 +7,16 @@ const CommentList = ({ comments, title }) => {
     }
 
     return (
-        <div>
+        <div className="row">
             <h3>{title}</h3>
             {comments &&
                 comments.map(comment => (
-                    <div key={comment._id} className="card mb-3">
+                    <div key={comment._id} className="card mb-3 col-3">
                         <p className="card-header">
                             <Link
                                 to={`/profile/${comment.username}`}
                                 style={{ fontWeight: 700 }}
-                                className="text-light"
+                                className="text-dark"
                             >
                                 {comment.username}
                             </Link>{' '}
