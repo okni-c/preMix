@@ -48,6 +48,10 @@ const Login = (props) => {
                   <h1 className="fp-head"> premix</h1>
                 </Link>
               </div>
+              <div className="col-12 justify-content-center">
+              <h5 className="form-extra">Already have an account?</h5>
+                <Link to="/signup" style={{ textDecoration: 'none', display: 'flex' }}><button className="form-btn">Sign up</button></Link>
+              </div>
             </div>
           </div>
 

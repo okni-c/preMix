@@ -237,6 +237,15 @@ body::-webkit-scrollbar-thumb:hover {
     font-weight: bold;
     font-size: 90px;
     text-align: center;
+    padding-left: 20px;
+}
+
+.form-extra {
+    color: #47525E;
+    font-family: Lato;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
 }
 
 .fp-logo {
