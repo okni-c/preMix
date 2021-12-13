@@ -357,12 +357,19 @@ body::-webkit-scrollbar-thumb:hover {
 
 .play-btn-grid {
     width: 110px;
-    padding-top: 52px;
-    margin-left: 50px;
+    margin-top: 52px;
+    margin-left: 55px;
     display: none;
 }
 
-.grid-card:hover .play-btn-grid {
+.like-btn-grid {
+    width: 44px;
+    margin-top: 4px;
+    margin-left: 156px;
+    display: none;
+}
+
+.grid-card:hover .play-btn-grid, .grid-card:hover .like-btn-grid {
     display: flex;
     cursor: pointer;
     transition: 0.2s;

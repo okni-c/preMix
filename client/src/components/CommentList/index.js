@@ -31,7 +31,7 @@ const CommentList = ({ comments, title }) => {
                             <div className="grid-card" style={{backgroundImage: `url(${Art})`}}>
                                 {/* <img className="album-art-grid" src={Art} /> */}
                                 <img className="play-btn-grid" src={Play} />
-                                {/* <img className="" src={Like} /> */}
+                                <img className="like-btn-grid" src={Like} />
                             </div>
 
                             <p className="grid-song-title"><Link
