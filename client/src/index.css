@@ -345,6 +345,7 @@ body::-webkit-scrollbar-thumb:hover {
     background-size: cover;
     height: 215px;
     width: 215px;
+    transition: 0.2s;
 }
 
 .album-art-grid {
@@ -353,13 +354,15 @@ body::-webkit-scrollbar-thumb:hover {
     margin-left: 0px;
     margin-right: 0px;
     width: 230px;
+    transition: 0.2s;
 }
 
 .play-btn-grid {
     width: 110px;
-    margin-top: 52px;
-    margin-left: 55px;
+    margin-top: 51px;
+    margin-left: 53px;
     display: none;
+    transition: 0.2s;
 }
 
 .like-btn-grid {
@@ -367,6 +370,7 @@ body::-webkit-scrollbar-thumb:hover {
     margin-top: 4px;
     margin-left: 156px;
     display: none;
+    transition: 0.2s;
 }
 
 .grid-card:hover .play-btn-grid, .grid-card:hover .like-btn-grid {
