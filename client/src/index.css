@@ -341,12 +341,55 @@ body::-webkit-scrollbar-thumb:hover {
     border-radius: 15px;
     margin-left: 0px;
     margin-right: 0px;
-    width: 230px;
     transition: 0.1s;
+    background-size: cover;
+    height: 215px;
+    width: 215px;
+}
+
+.album-art-grid {
+    border: 1px solid #8492A6;
+    border-radius: 15px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 230px;
+}
+
+.play-btn-grid {
+    width: 110px;
+    padding-top: 52px;
+    margin-left: 50px;
+    display: none;
+}
+
+.grid-card:hover .play-btn-grid {
+    display: flex;
+    cursor: pointer;
+    transition: 0.2s;
 }
 
 .grid-card:hover {
-    background-color: rgb(52, 63, 75);
-    opacity: 0.33;
+    opacity: 0.45;
     transition: 0.2s;
+}
+
+.grid-song-title {
+    color: #47525E;
+    font-family: Lato;
+    font-size: 21px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: -6px;
+}
+
+.grid-artist-title {
+    color: #47525E;
+    font-family: Lato;
+    font-size: 18px;
+    text-align: center;
+}
+
+.grid-artist-title:hover, .grid-song-title:hover {
+    color: #262b31;
+    transition: 0.1s;
 }

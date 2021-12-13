@@ -44,6 +44,7 @@ const Header = () => {
                     </a>
                       <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink">
                         <li><Link className="dropdown-item" to="/profile">{userData.me.username}</Link></li>
+                        <li><Link className="dropdown-item" to="/profile">Upload</Link></li>
                         <li><a className="dropdown-item danger" href="/" onClick={logout}>Log out</a></li>
                       </ul>
                     </div>

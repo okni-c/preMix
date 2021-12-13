@@ -2,6 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import Art from '../../images/album-art.jpeg';
+import Play from '../../images/play-btn.png';
+import Pause from '../../images/pause-btn.png';
+import Like from '../../images/like-btn.png';
 
 const CommentList = ({ comments, title }) => {
     if (!comments.length) {
@@ -25,26 +28,31 @@ const CommentList = ({ comments, title }) => {
                             posted on {comment.createdAt}
                         </p> */}
                         <div>
-                            <img className="grid-card" src={Art} />
-                            
-                                <p><Link
-                                        to={`/comment/${comment._id}`}
-                                        style={{ textDecoration: 'none' }}
-                                    >
-                                        Song title
-                                    </Link>
-                                </p>
-                                <p>
-                                    <Link
-                                        to={`/profile/${comment.username}`}
-                                        style={{ textDecoration: 'none' }}
-                                        className="text-dark"
-                                    >
-                                        {comment.username}
-                                    </Link>
-                                    {/* Reactions: {comment.reactionCount} || Click to{' '}
+                            <div className="grid-card" style={{backgroundImage: `url(${Art})`}}>
+                                {/* <img className="album-art-grid" src={Art} /> */}
+                                <img className="play-btn-grid" src={Play} />
+                                {/* <img className="" src={Like} /> */}
+                            </div>
+
+                            <p className="grid-song-title"><Link
+                                to={`/comment/${comment._id}`}
+                                style={{ textDecoration: 'none' }}
+                                className="grid-song-title"
+                            >
+                                Skittles
+                            </Link>
+                            </p>
+                            <p className="grid-artist-title">
+                                <Link
+                                    to={`/profile/${comment.username}`}
+                                    style={{ textDecoration: 'none' }}
+                                    className="grid-artist-title"
+                                >
+                                    {comment.username}
+                                </Link>
+                                {/* Reactions: {comment.reactionCount} || Click to{' '}
                                     {comment.reactionCount ? 'see' : 'start'} the discussion! */}
-                                </p>
+                            </p>
                         </div>
                     </div>
                 ))}
