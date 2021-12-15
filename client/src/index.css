@@ -343,9 +343,10 @@ body::-webkit-scrollbar-thumb:hover {
     margin-right: 0px;
     transition: 0.1s;
     background-size: cover;
-    height: 215px;
-    width: 215px;
+    position: relative;
+    width: 100%;
     transition: 0.2s;
+    padding-top: 100%;
 }
 
 .album-art-grid {
@@ -358,24 +359,26 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .play-btn-grid {
-    width: 110px;
-    margin-top: 51px;
-    margin-left: 53px;
+    width: 100%;
+    /* margin-top: -225px; */
+    margin-top: calc(-0.1vh - 100%);
     display: none;
     transition: 0.2s;
 }
 
 .like-btn-grid {
-    width: 44px;
+    /* width: 44px;
     margin-top: 4px;
     margin-left: 156px;
-    display: none;
+    display: none; */
+    width: 1px;
     transition: 0.2s;
 }
 
-.grid-card:hover .play-btn-grid, .grid-card:hover .like-btn-grid {
-    display: flex;
+.grid-card:hover .play-btn-grid {
     cursor: pointer;
+    display: flex;
+    flex-basis: center;
     transition: 0.2s;
 }
 

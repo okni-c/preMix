@@ -16,7 +16,7 @@ const CommentList = ({ comments, title }) => {
             {/* <h3>{title}</h3> */}
             {comments &&
                 comments.map(comment => (
-                    <div key={comment._id} className="col-3">
+                    <div key={comment._id} className="col-xxl-2 col-xl-3 col-lg-4 col-md-6">
                         {/* <p className="card-header">
                             <Link
                                 to={`/profile/${comment.username}`}
@@ -28,10 +28,10 @@ const CommentList = ({ comments, title }) => {
                             posted on {comment.createdAt}
                         </p> */}
                         <div>
-                            <div className="grid-card" style={{backgroundImage: `url(${Art})`}}>
+                            <div className="grid-card img-responsive" style={{backgroundImage: `url(${Art})`}}>
                                 {/* <img className="album-art-grid" src={Art} /> */}
+                                {/* <img className="like-btn-grid" src={Like} /> */}
                                 <img className="play-btn-grid" src={Play} />
-                                <img className="like-btn-grid" src={Like} />
                             </div>
 
                             <p className="grid-song-title"><Link
