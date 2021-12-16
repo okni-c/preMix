@@ -145,6 +145,7 @@ button {
 
 .discover-left-bar {
     border-right: 1px solid #D3DCE6;
+    height: 87vh;
 }
 
 .discover-right {
@@ -152,7 +153,8 @@ button {
     padding-right: 30px;
     padding-top: 15px;
     overflow: scroll;
-    height: 100vh;
+    overflow-x: hidden;
+    height: 87vh;
 }
 
 .discover-layout-img {
@@ -166,6 +168,10 @@ button {
     font-size: 21px;
     line-height: 27px;
     text-align: left;
+}
+
+.discover-page-main {
+    overflow: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -359,18 +365,15 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .play-btn-grid {
-    width: 100%;
-    /* margin-top: -225px; */
-    margin-top: calc(-0.1vh - 100%);
+    width: 50%;
+    height: 50%;
+    margin-top: calc(-0.1vh - 75%);
+    margin-left: 25%;
     display: none;
     transition: 0.2s;
 }
 
 .like-btn-grid {
-    /* width: 44px;
-    margin-top: 4px;
-    margin-left: 156px;
-    display: none; */
     width: 1px;
     transition: 0.2s;
 }
@@ -378,7 +381,6 @@ body::-webkit-scrollbar-thumb:hover {
 .grid-card:hover .play-btn-grid {
     cursor: pointer;
     display: flex;
-    flex-basis: center;
     transition: 0.2s;
 }
 

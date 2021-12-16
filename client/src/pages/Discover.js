@@ -5,6 +5,7 @@ import { QUERY_COMMENTS, QUERY_ME_BASIC } from '../utils/queries';
 import CommentList from '../components/CommentList';
 import FriendList from '../components/FriendList';
 import CommentForm from '../components/CommentForm';
+import PlayerFooter from '../components/PlayerFooter';
 import GridImg from '../images/grid.png';
 import ListImg from '../images/list.png';
 
@@ -21,7 +22,7 @@ const Home = () => {
   return (
     <>
       <HeaderSearch />
-      <main>
+      <main className="discover-page-main">
         <div className="container-fluid">
           <div className="row">
             <div className="col-2 discover-left-bar">
@@ -135,6 +136,7 @@ const Home = () => {
           </div>
         </div>
       </main >
+      <PlayerFooter />
     </>
   );
 };

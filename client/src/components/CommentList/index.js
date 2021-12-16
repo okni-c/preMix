@@ -3,10 +3,8 @@ import { Link } from 'react-router-dom';
 
 import Art from '../../images/album-art.jpeg';
 import Play from '../../images/play-btn.png';
-import Pause from '../../images/pause-btn.png';
-import Like from '../../images/like-btn.png';
-
 const CommentList = ({ comments, title }) => {
+
     if (!comments.length) {
         return <h3>No Comments Yet</h3>;
     }
@@ -28,10 +26,8 @@ const CommentList = ({ comments, title }) => {
                             posted on {comment.createdAt}
                         </p> */}
                         <div>
-                            <div className="grid-card img-responsive" style={{backgroundImage: `url(${Art})`}}>
-                                {/* <img className="album-art-grid" src={Art} /> */}
-                                {/* <img className="like-btn-grid" src={Like} /> */}
-                                <img className="play-btn-grid" src={Play} />
+                            <div className="grid-card d-flex" style={{ backgroundImage: `url(${Art})` }}>
+                            <img className="play-btn-grid" src={Play} />
                             </div>
 
                             <p className="grid-song-title"><Link
