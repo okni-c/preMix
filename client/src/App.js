@@ -10,6 +10,7 @@ import Profile from './pages/Profile';
 import Signup from './pages/Signup';
 import Discover from './pages/Discover';
 import Landing from './pages/Landing';
+import PlayerFooter from './components/PlayerFooter';
 
 import Footer from './components/Footer';
 
@@ -48,7 +49,7 @@ function App() {
 
           <Route component={NoMatch} />
         </Switch>
-        {/* <Footer /> */}
+        <PlayerFooter />
       </Router>
     </ApolloProvider>
   );

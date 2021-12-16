@@ -432,7 +432,7 @@ button {
 
 .footer-info {
     background-color: #303030;
-    
+
 }
 
 .footer-title {
@@ -453,4 +453,9 @@ button {
     font-family: Lato;
     font-size: 15px;
     text-align: left;
+}
+
+.player-footer {
+    -webkit-box-shadow: 0px 21px 50px 26px rgba(0, 0, 0, 0.32);
+    box-shadow: 0px 21px 50px 26px rgba(0, 0, 0, 0.32);
 }

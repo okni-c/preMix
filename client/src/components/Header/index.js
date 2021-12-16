@@ -6,6 +6,7 @@ import { QUERY_ME_BASIC } from '../../utils/queries';
 
 import DDArrow from '../../images/profile-arw.png';
 import DarkWave from '../../images/logo-wave-dark.png';
+import ProfilePic from '../../images/profile-picture.png';
 
 const Header = () => {
 
@@ -43,7 +44,7 @@ const Header = () => {
                   <div className="dropdown">
                   <a className="d-flex" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                     <div className="profile-nav-arw"><img className="dd-arrow" src={DDArrow} /></div>
-                    <div className="profile-nav-btn"></div>
+                    <img className="profile-nav-btn" src={ProfilePic} />
                   </a>
                     <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink">
                       <li><Link className="dropdown-item" to="/profile">{userData.me.username}</Link></li>

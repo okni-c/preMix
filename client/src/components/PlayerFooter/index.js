@@ -9,7 +9,7 @@ import 'react-h5-audio-player/lib/styles.css';
 
 const Footer = () => {
     return (
-        <footer className="fixed-bottom d-flex">
+        <footer className="player-footer fixed-bottom d-flex">
             {/* Album art and text */}
             <div className="footer-info row">
                 <img src={Art} className="footer-art col-6" />

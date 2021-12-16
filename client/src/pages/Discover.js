@@ -25,7 +25,7 @@ const Home = () => {
       <main className="discover-page-main">
         <div className="container-fluid">
           <div className="row">
-            <div className="col-2 discover-left-bar">
+            <div className="col-xl-2 col-lg-3 col-sm-4 discover-left-bar">
               <div className="row">
 
                 {/* Section */}
@@ -108,7 +108,7 @@ const Home = () => {
 
               </div>
             </div>
-            <div className="col-10 discover-right">
+            <div className="col-xl-10 col-lg-9 col-sm-8 discover-right">
 
               {/* {loggedIn && (
                 <div className="col-12 mb-3">
