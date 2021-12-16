@@ -1,28 +1,32 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import LightWave from '../../images/logo-wave-light.png';
+import Art from '../../images/album-art.jpeg';
+
+import Song from '../../mp3/songtest.mp3';
 
 import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
 
 const Footer = () => {
-  return (
-    <footer className="fixed-bottom">
-      {/* <nav class="navbar navbar-expand-lg bg-dark">
-        <div class="container-fluid">
+    return (
+        <footer className="fixed-bottom d-flex">
+            {/* Album art and text */}
+            <div className="footer-info row">
+                <img src={Art} className="footer-art col-6" />
+                <div className="footer-song col-6">
+                    <div className="col-12 footer-title">My Own Way</div>
+                    <div className="col-12 footer-artist">okni!</div>
+                </div>
+            </div>
 
-        <div class="justify-content">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a className="nav-link white" href="https://github.com/okni-c/preMix/blob/cd17d9ed6fd6448cb17a3ea709e5ceacada4b16c/CODE_OF_CONDUCT.md">C.O.C.</a>
-            </li>
-          </ul>
-        </div>
-        </div>
-      </nav> */}
-      <AudioPlayer />
-    </footer>
-  );
+            <div className="flex-grow-1">
+                <AudioPlayer
+                    src={Song}
+                    layout="stacked-reverse"
+                    onPlay={e => console.log("onPlay")} />
+            </div>
+        </footer>
+    );
 };
 
 export default Footer;
